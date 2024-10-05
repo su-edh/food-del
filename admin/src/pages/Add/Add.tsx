@@ -4,8 +4,7 @@ import { assets } from '../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const Add = () => {
-  const url = "http://localhost:4000";
+const Add = ({url}:{url: string}) => {
   const [image,setImage] = useState(false);
   const [data, setData] = useState({
     name:"",
@@ -35,7 +34,7 @@ const Add = () => {
           name:"",
           description:"",
           price:"",
-          category:"Salad",
+          category:data.category,
         });
         setImage(false);
         toast.success(response.data.message);   
