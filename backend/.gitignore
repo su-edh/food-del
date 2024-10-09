@@ -15,6 +15,7 @@ uploads
 assets
 public
 config
+.env
 
 # Editor directories and files
 .vscode/*
